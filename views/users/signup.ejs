@@ -1,47 +1,18 @@
-<% layout("/layouts/boilerplate") %>
+<% layout('/layouts/boilerplate') %>
+<% title = 'Sign Up' %>
 
+<div class="auth-card">
+    <h1 class="auth-logo">TripConnect</h1>
+    <p class="auth-subtitle">Create your account and start your journey</p>
 
-<div class="row">
-    <h1 class="col-6 offset-3">SignUp on Stayo</h1>
-  <div class="col-6 offset-3">
     <form action="/signup" method="POST" class="needs-validation" novalidate>
-        <div class="mb-3">
-        <label for="username" class="form-label">Username</label>
-        <input
-          name="username"
-          id = "username"
-          type="text" class="form-control"
-          required
-          >
-      </div>
-        <div class="valid-feedback">Looks good</div>
-
-        <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input
-          name="email"
-          id = "email"
-          type="email" class="form-control"
-          required
-          >
-      </div>
-
-        <div class="mb-3">
-        <label for="" class="form-label">Enter Password</label>
-        <input
-          name="password"
-          id = "password"
-          type="password" class="form-control"
-          required
-          >
-      </div>
-      <button class="btn btn-success" >Submit</button>
-        
-      
+        <input type="text" name="username" placeholder="Username" class="form-control" required>
+        <input type="email" name="email" placeholder="Email" class="form-control" required>
+        <input type="password" name="password" placeholder="Password" class="form-control" required>
+        <button type="submit" class="btn btn-success mt-3">Create Account</button>
     </form>
-    <br><br><br><br><br><br>
 
-     
-
-</div>
+    <p class="mt-4 text-muted">
+        Already have an account? <a href="/login" class="auth-link">Login</a>
+    </p>
 </div>
